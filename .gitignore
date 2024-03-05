@@ -109,5 +109,5 @@ venv.bak/
 # Vim swapfiles
 *.sw[op]
 
-# setuptools-scm
+# Setuptools-scm
 _version.py
