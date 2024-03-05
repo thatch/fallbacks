@@ -16,7 +16,7 @@ setup:
 
 .PHONY: test
 test:
-	python -m coverage run -m fallbacks.tests $(TESTOPTS)
+	python -m coverage run --omit __main__.py,_version.py -m fallbacks.tests $(TESTOPTS)
 	python -m coverage report
 
 .PHONY: format

@@ -1,5 +1,15 @@
 # fallbacks
 
+Used for caching whether a fast path is worthwhile.
+
+This is an extremely simple cache with no locking and an assumption that if
+multiple threads/processes try to record for the same key, that it's the same
+value (so it doesn't matter which wins).
+
+TODO
+
+* load/save on disk
+
 
 # Version Compat
 
