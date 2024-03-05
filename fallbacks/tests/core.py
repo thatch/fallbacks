@@ -4,7 +4,7 @@ from fallbacks import Var
 
 
 class VarTest(unittest.TestCase):
-    def test_default(self):
+    def test_default(self) -> None:
         v = Var("app", "var")
         self.assertTrue(v.check("pypi.org"))
         # The types say this is just a bool; might make sense to expand this in
@@ -12,7 +12,7 @@ class VarTest(unittest.TestCase):
         self.assertTrue(v.check("pypi.org", default=True))
         self.assertFalse(v.check("pypi.org", default=False))
 
-    def test_record(self):
+    def test_record(self) -> None:
         v = Var("app", "var")
         self.assertTrue(v.check("pypi.org"))
         v.record("pypi.org", False)
